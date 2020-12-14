@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="quiz.js"></script>
-</head>
-<body>
-<form name"quiz" id="quiz"></form>
-    <div>
-        <p>1. What is the name best programming language to learn in 2020?</p>
-        <p><input type="radio" name="question1" value="HTML">A. HTML</p>
-        <p><input type="radio" name="question1" value="Python">B. Python</p>
-        <p><input type="radio" name="question1" value="Javascript">C. Javascript</p>
-        <p><input type="radio" name="question1" value="C++">D. C++</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+    <div class="timer">Time: <span id="time">0</span></div>
+
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Try to answer the following code-related questions within the time
+          limit. Keep in mind that incorrect answers will penalize your
+          score/time by ten seconds!
+        </p>
+        <button id="start">Start Quiz</button>
+      </div>
+
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <h2>All done!</h2>
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>
+          Enter initials: <input type="text" id="initials" max="3" />
+          <button id="submit">Submit</button>
+        </p>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
     </div>
 
-    <div>
-        <p>2. What stores multiple values in a single variable?</p>
-        <p><input type="radio" name="question2" value="ParseInt">A. ParseInt</p>
-        <p><input type="radio" name="question2" value="Array">B. Array</p>
-        <p><input type="radio" name="question2" value="IanaMime">C. IanaMime</p>
-        <p><input type="radio" name="question2" value="If/else">D. If/Else</p>
-    </div>
-
-    <div>
-        <p>3. What does JSON mean?</p>
-        <p><input type="radio" name="question1" value="Javascript Object Notation">A. Javascript Object Notation</p>
-        <p><input type="radio" name="question1" value="Just Sleep On People">B. Just Sleep On People</p>
-        <p><input type="radio" name="question1" value="Jesus Saves Other Nation">C. Jesus Saves Other Nation</p>
-        <p><input type="radio" name="question1" value="C++">D. Jump Step Over Negelegance</p>
-    </div>
-
-    <div>
-        <p>4. Strings, Int, Float are considered?</p>
-        <p><input type="radio" name="question1" value="Boolean">A. Boolean</p>
-        <p><input type="radio" name="question1" value="Styles">B. Styles css</p>
-        <p><input type="radio" name="question1" value="Divs">C. Divs</p>
-        <p><input type="radio" name="question1" value="Variables">D. Variables</p>
-    </div>
-
-    <input type="button" value="Im done" onclick="check()"
-
-</body>
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
+  </body>
 </html>
